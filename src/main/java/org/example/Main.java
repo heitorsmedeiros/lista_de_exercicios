@@ -1,17 +1,33 @@
 package org.example;
  /*
- Nível 1
-3.	Conversão de Tipos (Casting Implícito e Explícito): Declare uma variável do tipo float e atribua um valor fracionado. Em seguida, declare uma variável do tipo long e atribua a ela o valor da variável float usando casting explícito. Por fim, declare uma variável do tipo double e atribua a ela o valor da variável long (casting implícito). Exiba todos os valores no console.
+ Exercício Aula 01/09/2026 - Classificação de Desempenho
+
   */
 
+import java.util.Scanner;
+
 public class Main {
-    public static void main() {
-        double valorDouble = 2.99;
-        long valorLong = (long) valorDouble; //casting explícito
-        double novoValorDouble = valorLong; //casting implícito
-        System.out.println(valorDouble);
-        System.out.println(valorLong);
-        System.out.println(novoValorDouble);
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a nota do aluno (entre 0 e 10): ");
+        double nota = scanner.nextDouble();
+
+        if (nota < 0 || nota > 10) {
+            System.out.println("Nota inválida! A nota deve estar entre 0 e 10.");
+        } else {
+            if (nota >= 9.0) {
+                System.out.println("Classificação: Excelente");
+            } else if (nota >= 7.0) {
+                System.out.println("Classificação: Bom");
+            } else if (nota >= 5.0) {
+                System.out.println("Classificação: Regular");
+            } else {
+                System.out.println("Classificação: Insuficiente");
+            }
+
 
         }
+
+    }
 }
