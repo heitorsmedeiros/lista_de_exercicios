@@ -1,6 +1,6 @@
 package org.example;
  /*
- Exercício Aula 04/09/2026 - Validação de Vale Refeição
+ Exercício Aula 04/09/2026 - Regra de Plano de Saúde
 
   */
 
@@ -10,23 +10,16 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-
-        System.out.print("Digite o salário: ");
-        double salario = scanner.nextDouble();
-
-        Boolean temValeRefeicao = salario <= 4000.0;
+        System.out.print("Digite o número de meses: ");
+        double meses = scanner.nextDouble();
 
 
-        if (temValeRefeicao) {
-            System.out.print("O funcionário tem direito ao vale refeição. ");
-            
-
-       
-            
+        if (meses > 3) {
+            System.out.println("O funcionário tem direito ao plano de saúde.");
         } else {
-            System.out.println("O funcionário não tem direito ao vale refeição.");
+            System.out.println("O funcionário não tem direito ao plano de saúde.");
         }
 
-        }
+        scanner.close();
     }
 }
