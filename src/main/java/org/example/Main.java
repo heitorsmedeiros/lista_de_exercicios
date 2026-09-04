@@ -1,6 +1,6 @@
 package org.example;
  /*
- Exercício Aula 01/09/2026 - Classificação de Desempenho
+ Exercício Aula 04/09/2026 - Validação de Vale Refeição
 
   */
 
@@ -11,30 +11,20 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
 
-        System.out.print("Digite a nota do aluno (entre 0 e 10): ");
-        double nota = scanner.nextDouble();
+        System.out.print("Digite o salário: ");
+        double salario = scanner.nextDouble();
 
-        String classificacao;
+        Boolean temValeRefeicao = salario <= 4000.0;
 
 
-        if (nota >= 0 && nota <= 10) {
+        if (temValeRefeicao) {
+            System.out.print("O funcionário tem direito ao vale refeição. ");
             
 
-            if (nota >= 9.0) {
-                classificacao = "Excelente";
-            } else if (nota >= 7.0) {
-                classificacao = "Bom";
-            } else if (nota >= 5.0) {
-                classificacao = "Regular";
-            } else {
-                classificacao = "Insuficiente";
-            }
-            
-
-            System.out.println("Classificação do desempenho: " + classificacao);
+       
             
         } else {
-            System.out.println("Erro: A nota inserida é inválida. Digite um valor entre 0 e 10.");
+            System.out.println("O funcionário não tem direito ao vale refeição.");
         }
 
         }
