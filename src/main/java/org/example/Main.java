@@ -8,36 +8,34 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Digite um número de 1 a 7: ");
-        int numero = entrada.nextInt();
 
-        switch (numero) {
-            case 1:
-                System.out.println("O dia correspondente é: Domingo");
-                break;
-            case 2:
-                System.out.println("O dia correspondente é: Segunda-feira");
-                break;
-            case 3:
-                System.out.println("O dia correspondente é: Terça-feira");
-                break;
-            case 4:
-                System.out.println("O dia correspondente é: Quarta-feira");
-                break;
-            case 5:
-                System.out.println("O dia correspondente é: Quinta-feira");
-                break;
-            case 6:
-                System.out.println("O dia correspondente é: Sexta-feira");
-                break;
-            case 7:
-                System.out.println("O dia correspondente é: Sábado");
-                break;
-            default:
-                System.out.println("Número inválido!");
-                break;
+        System.out.print("Digite a nota do aluno (entre 0 e 10): ");
+        double nota = scanner.nextDouble();
+
+        String classificacao;
+
+
+        if (nota >= 0 && nota <= 10) {
+            
+
+            if (nota >= 9.0) {
+                classificacao = "Excelente";
+            } else if (nota >= 7.0) {
+                classificacao = "Bom";
+            } else if (nota >= 5.0) {
+                classificacao = "Regular";
+            } else {
+                classificacao = "Insuficiente";
+            }
+            
+
+            System.out.println("Classificação do desempenho: " + classificacao);
+            
+        } else {
+            System.out.println("Erro: A nota inserida é inválida. Digite um valor entre 0 e 10.");
+        }
 
         }
     }
