@@ -1,6 +1,6 @@
 package org.example;
  /*
-Exercício Aula 10/09/2026 - Detecção de Transação Suspeita
+Exercício Aula 10/09/2026 -  Concessão de Isenção de Tarifas
 
 */
 
@@ -9,12 +9,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double valorTransacao = scanner.nextDouble();
+        double saldoMedio = scanner.nextDouble();
         
-        if(valorTransacao > 10000) {
-            System.out.println("Transação suspeita. Sinalizada para análise.");
+        if(saldoMedio > 5000) {
+            System.out.println("Isenção de tarifa concedida.");
         } else {
-            System.out.println("Transação normal.");
+            System.out.println("Tarifa mantida.");
         }
     }
 }
