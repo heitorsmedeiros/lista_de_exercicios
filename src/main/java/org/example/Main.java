@@ -1,6 +1,6 @@
 package org.example;
  /*
- Exercício Aula 10/09/2026 - Regra Curso de Idiomas
+ Exercício Aula 10/09/2026 - Regra Empréstimo
 
   */
 
@@ -10,13 +10,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Digite o cargo do funcionário: ");
-        String cargo = scanner.nextLine();
+        double salario = scanner.nextDouble();
+        double parcela = scanner.nextDouble();
         
-        if (cargo.equalsIgnoreCase("administrativo") || cargo.equalsIgnoreCase("liderança") || cargo.equalsIgnoreCase("lideranca")) {
-            System.out.println("O funcionário pode participar do programa de idiomas.");
+        if(parcela <= (salario * 0.30)) {
+            System.out.println("Empréstimo aprovado");
         } else {
-            System.out.println("Não pode participar do programa de idiomas.");
+            System.out.println("Empréstimo recusado");
         }
     }
 }
