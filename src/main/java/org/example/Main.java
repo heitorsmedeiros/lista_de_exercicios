@@ -1,6 +1,6 @@
 package org.example;
  /*
-Exercício Aula 10/09/2026 -  Concessão de Isenção de Tarifas
+Exercício Aula 10/09/2026 - Controle de Eventos
 
 */
 
@@ -9,12 +9,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double saldoMedio = scanner.nextDouble();
-        
-        if(saldoMedio > 5000) {
-            System.out.println("Isenção de tarifa concedida.");
-        } else {
-            System.out.println("Tarifa mantida.");
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Digite o nome do participante " + i + ": ");
+            String nome = scanner.nextLine();
+            System.out.println("Participante " + nome + " registrado com sucesso!\n");
         }
+
+        scanner.close();
     }
 }
