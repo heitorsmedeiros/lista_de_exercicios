@@ -1,6 +1,6 @@
 package org.example;
  /*
-Exercício Aula 10/09/2026 - Eligibilidade Cartão de Crédito Premium
+Exercício Aula 10/09/2026 - Detecção de Transação Suspeita
 
 */
 
@@ -9,13 +9,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double renda = scanner.nextDouble();
-        int score = scanner.nextInt();
+        double valorTransacao = scanner.nextDouble();
         
-        if(renda > 8000 && score > 700) {
-            System.out.println("Cartão Premium aprovado");
+        if(valorTransacao > 10000) {
+            System.out.println("Transação suspeita. Sinalizada para análise.");
         } else {
-            System.out.println("Cartão Premium recusado");
+            System.out.println("Transação normal.");
         }
     }
 }
