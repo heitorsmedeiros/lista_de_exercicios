@@ -1,6 +1,6 @@
 package org.example;
  /*
-Exercício Aula 11/09/2026 - Pesquisa de Satistfação 
+Exercício Aula 11/09/2026 - Caixa de Supermercado 
 */
 
 import java.util.Scanner;
@@ -8,15 +8,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int avaliacoes = 0;
+        double total = 0;
+        String continuar;
 
-        for (int i = 1; i <= 10; i++) {
-            System.out.print("Digite a nota de satisfação do cliente " + i + ": ");
-            scanner.nextDouble();
-            avaliacoes++;
-        }
+        do {
+            System.out.print("Digite o valor do produto: ");
+            double valor = scanner.nextDouble();
+            total += valor;
 
-        System.out.println("\nQuantidade de avaliações registradas: " + avaliacoes);
+            System.out.print("Deseja continuar registrando? (S/N): ");
+            continuar = scanner.next();
+        } while (continuar.equalsIgnoreCase("S"));
+
+        System.out.println("\nTotal da compra: R$ " + total);
 
         scanner.close();
     }
