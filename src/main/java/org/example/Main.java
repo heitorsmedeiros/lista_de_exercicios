@@ -1,7 +1,6 @@
 package org.example;
  /*
-Exercício Aula 11/09/2026 - Soma de Vendas do Dia
-
+Exercício Aula 11/09/2026 - Pesquisa de Satistfação 
 */
 
 import java.util.Scanner;
@@ -9,15 +8,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double total = 0;
+        int avaliacoes = 0;
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.print("Digite o valor da venda " + i + ": ");
-            double valor = scanner.nextDouble();
-            total += valor;
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Digite a nota de satisfação do cliente " + i + ": ");
+            scanner.nextDouble();
+            avaliacoes++;
         }
 
-        System.out.println("\nFaturamento total do dia: R$ " + total);
+        System.out.println("\nQuantidade de avaliações registradas: " + avaliacoes);
 
         scanner.close();
     }
